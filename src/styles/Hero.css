@@ -1,11 +1,12 @@
 .hero {
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
   padding-top: 2em;
-  margin-top: 2em;
+  /* margin-top: 2em; */
 }
 
 .hero-content {
@@ -72,7 +73,7 @@ canvas {
   }
 
   .hero-wrapper {
-    width: 100vw;
+    width: 90vw;
     padding: 0;
   }
 
