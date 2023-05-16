@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.col-lg-8,
+.col-lg-10 {
+  flex: 0 0 100%;
+  padding: 15px;
+}
+
+@media (min-width: 768px) {
+  .col-lg-8,
+  .col-lg-10 {
+    flex: 0 0 66.6666666667%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-10 {
+    flex: 0 0 83.3333333333%;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 2em;
+  margin-top: 2em;
+}
+
+.hero-content {
+  border: 1px solid white;
+  padding: 40px 80px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  font-size: 32px;
+}
+
+.hero-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.icon:hover {
+  color: pink;
+}
+
+.down-arrow {
+  margin-top: 5rem;
+  font-size: 32px;
+  position: relative;
+  animation: bounce 1s infinite alternate;
+}
+
+.wave {
+  position: relative;
+  height: 200px; /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+}
+
+canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 40px;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero-wrapper {
+    width: 100vw;
+    padding: 0px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    margin-bottom: 2rem;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
