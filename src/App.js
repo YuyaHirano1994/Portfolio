@@ -20,6 +20,7 @@ import {
   SiAmazonaws,
   SiGithub,
 } from "react-icons/si";
+import { useEffect } from "react";
 
 function App() {
   const skills = [
@@ -41,6 +42,28 @@ function App() {
     { icon: FaCode, name: "Other" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".fadein");
+
+      elements.forEach((element) => {
+        const elemPos = element.offsetTop;
+        const scroll = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+
+        if (scroll > elemPos - windowHeight + 200) {
+          element.classList.add("scrollin");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="container">
@@ -49,12 +72,12 @@ function App() {
           <Hero />
           <div className="col-lg-8 col-md-12 about">
             <div className="about-wrapper">
-              <div className="about-title">
+              <div className="about-title fadein">
                 <div className="title">
                   <h2>about me</h2>
                 </div>
               </div>
-              <div className="about-content">
+              <div className="about-content fadein">
                 <div className="about-image">
                   <img src={about_img} alt="image1"></img>
                 </div>
@@ -67,7 +90,7 @@ function App() {
                   <p>I have experience of web developer and system engineer!</p>
                 </div>
               </div>
-              <div className="skill-area">
+              <div className="skill-area fadein">
                 <div className="skill-icons">
                   {skills.map((skill, index) => (
                     <div className="skill-icon" key={index}>
