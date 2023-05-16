@@ -33,7 +33,7 @@ a {
 
 .col-lg-10 {
   flex: 0 0 80%;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 @media (max-width: 767px) {
@@ -41,5 +41,11 @@ a {
   .col-lg-10 {
     flex: 0 0 100%;
     /* padding: 15px; */
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
   }
 }

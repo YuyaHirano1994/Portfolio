@@ -7,7 +7,7 @@ const Header = () => {
       <div>
         <h5>Y.H</h5>
       </div>
-      <div>
+      <div className="menu-area">
         <ul className="menu gnavi">
           <li>
             <a href="#">About</a>
