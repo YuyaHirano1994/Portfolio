@@ -114,12 +114,12 @@ function App() {
     <div className="container">
       <div className="row">
         <Header />
+        <canvas id="waveCanvas"></canvas>
         <div class="col-lg-8 col-md-12 hero">
           <div className="hero-wrapper">
             <div className="hero-content">
               <h1>Yuya Hirano</h1>
               <p>I am Web Developer from Japan</p>
-              <canvas id="waveCanvas"></canvas>
             </div>
             <div className="hero-icons">
               <div className="icon">
