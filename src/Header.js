@@ -3,12 +3,12 @@ import "./styles/Header.css";
 
 const Header = () => {
   return (
-    <div class="col-lg-8 col-md-12 header">
+    <div className="col-lg-8 col-md-12 header">
       <div>
         <h5>Y.H</h5>
       </div>
       <div>
-        <ul className="menu">
+        <ul className="menu gnavi">
           <li>
             <a href="#">About</a>
           </li>

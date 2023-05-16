@@ -112,7 +112,7 @@ const Hero = () => {
   return (
     <>
       <canvas id="waveCanvas"></canvas>
-      <div class="col-lg-8 col-md-12 hero">
+      <div className="col-lg-8 col-md-12 hero">
         <div className="hero-wrapper">
           <div className="hero-content">
             <h1>Yuya Hirano</h1>
@@ -120,13 +120,19 @@ const Hero = () => {
           </div>
           <div className="hero-icons">
             <div className="icon">
-              <BsGithub />
+              <a href="https://github.com/YuyaHirano1994" target="_blank">
+                <BsGithub />
+              </a>
             </div>
             <div className="icon">
-              <BsLinkedin />
+              <a href="https://www.linkedin.com/in/yuya-hirano/" target="_blank">
+                <BsLinkedin />
+              </a>
             </div>
             <div className="icon">
-              <FaFileDownload />
+              <a href="#">
+                <FaFileDownload />
+              </a>
             </div>
           </div>
           <div className="down-arrow">
