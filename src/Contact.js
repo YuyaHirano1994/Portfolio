@@ -36,7 +36,11 @@ const Contact = () => {
               </a>
             </div>
             <div className="icon">
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/yuya-hirano/overlay/1635526738190/single-media-viewer/?profileId=ACoAAD0iPRgBMCRVceSgyfkb4euO3KgLVqQbRO4"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaFileDownload />
               </a>
             </div>
