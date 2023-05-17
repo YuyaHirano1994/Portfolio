@@ -40,6 +40,25 @@ const Project = () => {
           <div className="project-image">
             <div className="bgLR">
               <span className="mask">
+                <img src={MotiveDiary} alt="project-image1"></img>
+                <span className="cap">
+                  <h5>Motive Diary</h5>
+                  <div className="project-links">
+                    <a href="https://github.com/YuyaHirano1994/MotiveDiary" target="_blank" rel="noreferrer">
+                      <SiGithub />
+                    </a>
+                    <a href="https://motive-diary.vercel.app/" target="_blank" rel="noreferrer">
+                      <BiLinkExternal />
+                    </a>
+                  </div>
+                </span>
+              </span>
+            </div>
+            <p>React & Supabase</p>
+          </div>
+          <div className="project-image">
+            <div className="bgLR">
+              <span className="mask">
                 <img src={errLogger} alt="project-image1" className="leftSide"></img>
                 <span className="cap">
                   <h5>Error logger</h5>
@@ -61,7 +80,7 @@ const Project = () => {
               <span className="mask">
                 <img src={trendSearch} alt="project-image1"></img>
                 <span className="cap">
-                  <h5>Twitter Trend Search</h5>
+                  <h5>Twitter Trend</h5>
                   <div className="project-links">
                     <a href="https://github.com/YuyaHirano1994/Twitter-Trend-Search" target="_blank" rel="noreferrer">
                       <SiGithub />
@@ -94,25 +113,7 @@ const Project = () => {
             </div>
             <p>React & API</p>
           </div>
-          <div className="project-image">
-            <div className="bgLR">
-              <span className="mask">
-                <img src={MotiveDiary} alt="project-image1"></img>
-                <span className="cap">
-                  <h5>Motive Diary</h5>
-                  <div className="project-links">
-                    <a href="https://github.com/YuyaHirano1994/MotiveDiary" target="_blank" rel="noreferrer">
-                      <SiGithub />
-                    </a>
-                    <a href="https://motive-diary.vercel.app/" target="_blank" rel="noreferrer">
-                      <BiLinkExternal />
-                    </a>
-                  </div>
-                </span>
-              </span>
-            </div>
-            <p>React & Supabase</p>
-          </div>
+
           {/* <div className="project-image">
                   <img src="#" alt="project-image1"></img>
                 </div> */}

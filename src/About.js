@@ -77,7 +77,7 @@ const About = () => {
             <p>
               A Full-Stack Web Developer passionate about creating interactive applications and experiences on the web.
             </p>
-            <p>I have experience of web developer and system engineer!</p>
+            <p>I love coding and learning new skill.</p>
           </div>
         </div>
         <div className="skill-area fadein">
