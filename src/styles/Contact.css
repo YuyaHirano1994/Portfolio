@@ -29,14 +29,12 @@
 
 .contact h2 {
   font-size: 48px;
-  /* letter-spacing: 2px; */
 }
 
 .contact-content {
   height: auto;
   display: block;
   justify-content: center;
-  /* border: 1px solid yellow; */
 }
 
 .contact-content .text {

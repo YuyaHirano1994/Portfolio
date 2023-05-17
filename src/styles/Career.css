@@ -28,13 +28,11 @@
 
 .career h2 {
   font-size: 48px;
-  /* letter-spacing: 2px; */
 }
 
 .career-content {
   height: 600px;
   display: flex;
-  /* border: 1px solid yellow; */
 }
 
 .career-content h2 {

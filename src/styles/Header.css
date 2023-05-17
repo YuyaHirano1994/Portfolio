@@ -41,12 +41,8 @@
 }
 
 /* anime */
-/*==================================================
-　5-3-1 中心から外に線が伸びる（下部）
-===================================*/
 
 .gnavi li a {
-  /*線の基点とするためrelativeを指定*/
   position: relative;
 }
 
@@ -57,22 +53,18 @@
 
 .gnavi li a::after {
   content: "";
-  /*絶対配置で線の位置を決める*/
   position: absolute;
   bottom: 0;
   left: 10%;
-  /*線の形状*/
   width: 80%;
   height: 2px;
   background: pink;
-  /*アニメーションの指定*/
   transition: all 0.3s;
-  transform: scale(0, 1); /*X方向0、Y方向1*/
-  transform-origin: center top; /*上部中央基点*/
+  transform: scale(0, 1);
+  transform-origin: center top;
 }
 
-/*現在地とhoverの設定*/
 .gnavi li.current a::after,
 .gnavi li a:hover::after {
-  transform: scale(1, 1); /*X方向にスケール拡大*/
+  transform: scale(1, 1);
 }

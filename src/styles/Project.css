@@ -28,7 +28,6 @@
 
 .project h2 {
   font-size: 48px;
-  /* letter-spacing: 2px; */
 }
 
 .project-content {
@@ -41,7 +40,6 @@
   width: 300px;
   height: 300px;
   object-fit: cover;
-  /* object-position: 0 0; */
 }
 
 .project-image p {
@@ -81,16 +79,15 @@
 }
 
 /* anime */
-/* 背景が左から出現＋テキスト */
 .bgLR {
-  position: relative; /*テキストの基点となる位置を定義*/
+  position: relative;
 }
 
 .bgLR span.mask {
-  position: relative; /*背景色の基点となる位置を定義*/
+  position: relative;
   display: block;
-  line-height: 0; /*行の高さを0にする*/
-  overflow: hidden; /*拡大してはみ出る要素を隠す*/
+  line-height: 0;
+  overflow: hidden;
 }
 
 .bgLR span.mask::before {
@@ -100,15 +97,14 @@
   left: 0;
   top: 0;
   opacity: 0;
-  transition: 0.3s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  transition: 0.3s ease-in-out;
   transform: translateX(-100%);
-  background: #333; /*背景色*/
+  background: #333;
   width: 100%;
   height: 100%;
 }
 
 .bgLR:hover span.mask::before {
-  /*hoverした時の変化*/
   opacity: 1;
   transform: translateX(0);
 }
@@ -116,16 +112,15 @@
 .bgLR span.cap {
   position: absolute;
   opacity: 0;
-  transition: 0.5s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
-  z-index: 3; /*テキストを前面に出す*/
+  transition: 0.5s ease-in-out;
+  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff; /*テキストの色を変えたい場合はここを修正*/
-  line-height: 1.5; /*行の高さを1.5にする*/
+  color: #fff;
+  line-height: 1.5;
 }
 
 .bgLR:hover span.cap {
-  /*hoverした時の変化*/
   opacity: 1;
 }

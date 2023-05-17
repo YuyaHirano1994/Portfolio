@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  /* outline: 2px red solid; */
 }
 
 body {
@@ -30,19 +29,16 @@ a {
 
 .col-lg-8 {
   flex: 0 0 66%;
-  /* padding: 15px; */
 }
 
 .col-lg-10 {
   flex: 0 0 80%;
-  /* padding: 15px; */
 }
 
 @media (max-width: 767px) {
   .col-lg-8,
   .col-lg-10 {
     flex: 0 0 100%;
-    /* padding: 15px; */
   }
 
   .row {
@@ -55,8 +51,8 @@ a {
 /* anime */
 .wave {
   position: relative;
-  height: 200px; /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
-  background: #fff; /*背景を塗りつぶして重ねた波を表現したい場合は、波を描画する親要素に波と同じ背景色を設定しましょう。*/
+  height: 200px;
+  background: #fff;
 }
 canvas {
   position: absolute;
