@@ -1,0 +1,131 @@
+.project {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 2em;
+  margin-top: 2em;
+}
+
+.project-wrapper {
+  margin-top: 5em;
+}
+
+.project-title {
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-title .title {
+  border: 1px solid white;
+  width: fit-content;
+  padding: 30px 60px;
+}
+
+.project h2 {
+  font-size: 48px;
+  /* letter-spacing: 2px; */
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.project-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  /* object-position: 0 0; */
+}
+
+.project-image p {
+  margin-bottom: 2em;
+}
+
+.project-image .leftSide {
+  object-position: 0 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 20px;
+  font-size: 32px;
+}
+
+@media (max-width: 820px) {
+  .project {
+    height: auto;
+  }
+
+  .project h2 {
+    font-size: 24px;
+  }
+
+  .project-content {
+    display: block;
+  }
+
+  .project-image {
+    margin-left: 0;
+  }
+
+  .project-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* anime */
+/* 背景が左から出現＋テキスト */
+.bgLR {
+  position: relative; /*テキストの基点となる位置を定義*/
+}
+
+.bgLR span.mask {
+  position: relative; /*背景色の基点となる位置を定義*/
+  display: block;
+  line-height: 0; /*行の高さを0にする*/
+  overflow: hidden; /*拡大してはみ出る要素を隠す*/
+}
+
+.bgLR span.mask::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  transform: translateX(-100%);
+  background: #333; /*背景色*/
+  width: 100%;
+  height: 100%;
+}
+
+.bgLR:hover span.mask::before {
+  /*hoverした時の変化*/
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bgLR span.cap {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  z-index: 3; /*テキストを前面に出す*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5; /*行の高さを1.5にする*/
+}
+
+.bgLR:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
+}

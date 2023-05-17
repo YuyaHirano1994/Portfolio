@@ -54,12 +54,6 @@ const About = () => {
       });
     };
 
-    let timeoutId;
-    const handleScrollDelay = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(handleScroll, 100); // 適宜調整可能な遅延時間
-    };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {

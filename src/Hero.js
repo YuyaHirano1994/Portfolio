@@ -120,12 +120,12 @@ const Hero = () => {
           </div>
           <div className="hero-icons">
             <div className="icon">
-              <a href="https://github.com/YuyaHirano1994" target="_blank">
+              <a href="https://github.com/YuyaHirano1994" target="_blank" rel="noreferrer">
                 <BsGithub />
               </a>
             </div>
             <div className="icon">
-              <a href="https://www.linkedin.com/in/yuya-hirano/" target="_blank">
+              <a href="https://www.linkedin.com/in/yuya-hirano/" target="_blank" rel="noreferrer">
                 <BsLinkedin />
               </a>
             </div>
