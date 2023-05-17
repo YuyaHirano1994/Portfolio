@@ -5,6 +5,9 @@ import About from "./About";
 import Project from "./Project";
 import Career from "./Career";
 import Contact from "./Contact";
+import Scroll from "./components/Scroll";
+import { Element } from "react-scroll";
+
 import "./styles/App.css";
 
 function App() {
@@ -18,6 +21,7 @@ function App() {
           <Project />
           <Career />
           <Contact />
+          <Scroll />
         </div>
       </div>
     </>

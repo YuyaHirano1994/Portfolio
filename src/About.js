@@ -61,7 +61,7 @@ const About = () => {
     };
   }, []);
   return (
-    <div className="col-lg-8 col-md-12 about">
+    <div className="col-lg-8 col-md-12 about" id="about" name="about">
       <div className="about-wrapper">
         <div className="about-title fadein">
           <div className="title">

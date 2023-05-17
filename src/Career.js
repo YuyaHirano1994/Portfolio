@@ -5,7 +5,7 @@ import "./styles/Career.css";
 
 const Career = () => {
   return (
-    <div className="col-lg-8 col-md-12 career">
+    <div className="col-lg-8 col-md-12 career" id="career" name="career">
       <div className="career-wrapper">
         <div className="career-title fadein">
           <div className="title">
@@ -13,13 +13,7 @@ const Career = () => {
           </div>
         </div>
         <div className="career-content fadein">
-          <Chrono
-            items={data}
-            mode="VERTICAL"
-            contentDetailsHeight="300"
-            // hideControls="true"
-            activeItemIndex="999"
-          />
+          <Chrono items={data} mode="VERTICAL" contentDetailsHeight="300" activeItemIndex="999" />
         </div>
       </div>
     </div>

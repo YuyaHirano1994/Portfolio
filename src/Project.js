@@ -10,7 +10,7 @@ import "./styles/Project.css";
 
 const Project = () => {
   return (
-    <div className="col-lg-8 col-md-12 project">
+    <div className="col-lg-8 col-md-12 project" id="project" name="project">
       <div className="project-wrapper">
         <div className="project-title fadein">
           <div className="title">
