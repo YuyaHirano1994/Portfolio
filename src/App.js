@@ -1,104 +1,129 @@
 import Header from "./Header";
 import Hero from "./Hero";
+import About from "./About";
 import "./styles/App.css";
-import about_img from "./images/image1.jpeg";
-import { FaCode, FaJava } from "react-icons/fa";
-
-import {
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNodedotjs,
-  SiHtml5,
-  SiCss3,
-  SiSass,
-  SiTailwindcss,
-  SiOracle,
-  SiSupabase,
-  SiMysql,
-  SiGraphql,
-  SiAmazonaws,
-  SiGithub,
-} from "react-icons/si";
-import { useEffect } from "react";
+import vanPark from "./images/Vancouver-Park.png";
+import errLogger from "./images/Error-logger.png";
+import trendSearch from "./images/Trend-Search.png";
+import petMatching from "./images/Pet-Matching.png";
+import MotiveDiary from "./images/Motive-Diary.png";
+import { SiGithub } from "react-icons/si";
+import { BiLinkExternal } from "react-icons/bi";
 
 function App() {
-  const skills = [
-    { icon: SiJavascript, name: "JavaScript" },
-    { icon: SiTypescript, name: "TypeScript" },
-    { icon: SiReact, name: "React" },
-    { icon: SiNodedotjs, name: "Node.js" },
-    { icon: FaJava, name: "Java" },
-    { icon: SiHtml5, name: "HTML5" },
-    { icon: SiCss3, name: "CSS3" },
-    { icon: SiSass, name: "Sass" },
-    { icon: SiTailwindcss, name: "Tailwind" },
-    { icon: SiSupabase, name: "Supabase" },
-    { icon: SiMysql, name: "MySQL" },
-    { icon: SiOracle, name: "OracleDB" },
-    { icon: SiGraphql, name: "GraphQL" },
-    { icon: SiAmazonaws, name: "AWS" },
-    { icon: SiGithub, name: "Git" },
-    { icon: FaCode, name: "Other" },
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const elements = document.querySelectorAll(".fadein");
-
-      elements.forEach((element) => {
-        const elemPos = element.offsetTop;
-        const scroll = window.pageYOffset;
-        const windowHeight = window.innerHeight;
-
-        if (scroll > elemPos - windowHeight + 200) {
-          element.classList.add("scrollin");
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
       <div className="container">
         <div className="row">
           <Header />
           <Hero />
-          <div className="col-lg-8 col-md-12 about">
-            <div className="about-wrapper">
-              <div className="about-title fadein">
+          <About />
+          <div className="col-lg-8 col-md-12 project">
+            <div className="project-wrapper">
+              <div className="project-title fadein">
                 <div className="title">
-                  <h2>about me</h2>
+                  <h2>Project</h2>
                 </div>
               </div>
-              <div className="about-content fadein">
-                <div className="about-image">
-                  <img src={about_img} alt="image1"></img>
+              <div className="project-content fadein">
+                <div className="project-image">
+                  <div className="bgLR">
+                    <span className="mask">
+                      <img src={vanPark} alt="project-image1" className="leftSide"></img>
+                      <span className="cap">
+                        <h5>Landing Page</h5>
+                        <div className="project-links">
+                          <a href="https://github.com/YuyaHirano1994/camp-website" target="_blank">
+                            <SiGithub />
+                          </a>
+                          <a href="https://vancouverpark.netlify.app/" target="_blank">
+                            <BiLinkExternal />
+                          </a>
+                        </div>
+                      </span>
+                    </span>
+                  </div>
+                  <p>Landing page</p>
                 </div>
-                <div className="about-desc">
-                  <p>Hi, there! I'm, Yuya Hirano.</p>
-                  <p>
-                    A Full-Stack Web Developer passionate about creating interactive applications and experiences on the
-                    web.
-                  </p>
-                  <p>I have experience of web developer and system engineer!</p>
+                <div className="project-image">
+                  <div className="bgLR">
+                    <span className="mask">
+                      <img src={errLogger} alt="project-image1" className="leftSide"></img>
+                      <span className="cap">
+                        <h5>Error logger</h5>
+                        <div className="project-links">
+                          <a href="https://github.com/YuyaHirano1994/error-logger" target="_blank">
+                            <SiGithub />
+                          </a>
+                          <a href="https://error-logger-nine.vercel.app/" target="_blank">
+                            <BiLinkExternal />
+                          </a>
+                        </div>
+                      </span>
+                    </span>
+                  </div>
+                  <p>Redux CRUD</p>
                 </div>
-              </div>
-              <div className="skill-area fadein">
-                <div className="skill-icons">
-                  {skills.map((skill, index) => (
-                    <div className="skill-icon" key={index}>
-                      <skill.icon />
-                      <p>{skill.name}</p>
-                    </div>
-                  ))}
+                <div className="project-image">
+                  <div className="bgLR">
+                    <span className="mask">
+                      <img src={trendSearch} alt="project-image1"></img>
+                      <span className="cap">
+                        <h5>Twitter Trend Search</h5>
+                        <div className="project-links">
+                          <a href="https://github.com/YuyaHirano1994/Twitter-Trend-Search" target="_blank">
+                            <SiGithub />
+                          </a>
+                          <a href="https://twitter-trend-search.vercel.app/" target="_blank">
+                            <BiLinkExternal />
+                          </a>
+                        </div>
+                      </span>
+                    </span>
+                  </div>
+                  <p>React & AWS</p>
                 </div>
+                <div className="project-image">
+                  <div className="bgLR">
+                    <span className="mask">
+                      <img src={petMatching} alt="project-image1"></img>
+                      <span className="cap">
+                        <h5>Pet Matching</h5>
+                        <div className="project-links">
+                          <a href="https://github.com/YuyaHirano1994/pet-matching-app" target="_blank">
+                            <SiGithub />
+                          </a>
+                          <a href="https://pet-matching-app.vercel.app/" target="_blank">
+                            <BiLinkExternal />
+                          </a>
+                        </div>
+                      </span>
+                    </span>
+                  </div>
+                  <p>React & API</p>
+                </div>
+                <div className="project-image">
+                  <div className="bgLR">
+                    <span className="mask">
+                      <img src={MotiveDiary} alt="project-image1"></img>
+                      <span className="cap">
+                        <h5>Motive Diary</h5>
+                        <div className="project-links">
+                          <a href="https://github.com/YuyaHirano1994/MotiveDiary" target="_blank">
+                            <SiGithub />
+                          </a>
+                          <a href="https://motive-diary.vercel.app/" target="_blank">
+                            <BiLinkExternal />
+                          </a>
+                        </div>
+                      </span>
+                    </span>
+                  </div>
+                  <p>React & Supabase</p>
+                </div>
+                {/* <div className="project-image">
+                  <img src="#" alt="project-image1"></img>
+                </div> */}
               </div>
             </div>
           </div>

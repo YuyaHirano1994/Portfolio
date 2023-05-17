@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  /* outline: 2px red solid; */
 }
 
 body {
@@ -51,8 +52,8 @@ a {
   }
 }
 
-.about {
-  height: 80vh;
+.project {
+  height: 100vh;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -61,10 +62,11 @@ a {
   margin-top: 2em;
 }
 
-.about-wrapper {
+.project-wrapper {
+  margin-top: 5em;
 }
 
-.about-title {
+.project-title {
   width: 100%;
   padding: 30px 60px;
   display: flex;
@@ -72,115 +74,107 @@ a {
   text-align: center;
 }
 
-.about-title .title {
+.project-title .title {
   border: 1px solid white;
   width: fit-content;
   padding: 30px 60px;
 }
 
-.about h2 {
+.project h2 {
   font-size: 48px;
 }
 
-.about-content {
-  display: flex;
-}
-
-.about-image {
-  margin-left: 2em;
-}
-
-.about-image img {
-  border-radius: 50%;
-  width: 200px;
-  height: auto;
-  filter: grayscale(100%);
-}
-
-.about-desc {
-  margin-left: 2em;
-  margin-top: 2em;
-  text-align: left;
-}
-
-.about-desc p {
-  line-height: 2;
-  letter-spacing: 2px;
-}
-
-.about-desc h5 {
-  line-height: 2;
-  letter-spacing: 2px;
-}
-
-.skill-area {
-  /* border: 1px solid yellow; */
-  margin-top: 2em;
-}
-
-.skill-icons {
+.project-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
-.skill-icon {
-  font-size: 20px;
+.project-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  /* object-position: 0 0; */
 }
 
-.skill-icon p {
-  font-size: 14px;
+.project-image p {
+  margin-bottom: 2em;
+}
+
+.project-image .leftSide {
+  object-position: 0 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 20px;
+  font-size: 32px;
 }
 
 @media (max-width: 820px) {
-  .about h2 {
+  .project h2 {
     font-size: 24px;
   }
 
-  .about-content {
+  .project-content {
     display: block;
   }
 
-  .about-image {
+  .project-image {
     margin-left: 0;
   }
 
-  .about-desc {
-    padding: 2em;
-    margin: 0;
-    text-align: center;
-  }
-
-  .skill-icons {
-    grid-template-columns: repeat(3, 1fr);
+  .project-content {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 /* anime */
-/* 画面外にいる状態 */
-.fadein {
-  opacity: 0.1;
-  transform: translate(0, 50px);
-  transition: all 500ms;
+/* 背景が左から出現＋テキスト */
+.bgLR {
+  position: relative; /*テキストの基点となる位置を定義*/
 }
 
-/* 画面内に入った状態 */
-.fadein.scrollin {
+.bgLR span.mask {
+  position: relative; /*背景色の基点となる位置を定義*/
+  display: block;
+  line-height: 0; /*行の高さを0にする*/
+  overflow: hidden; /*拡大してはみ出る要素を隠す*/
+}
+
+.bgLR span.mask::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  transform: translateX(-100%);
+  background: #333; /*背景色*/
+  width: 100%;
+  height: 100%;
+}
+
+.bgLR:hover span.mask::before {
+  /*hoverした時の変化*/
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translateX(0);
 }
 
-/* 2つ目の要素に200msのdelayをかける */
-#effect2 > div .fadein:nth-of-type(2) {
-  -moz-transition-delay: 200ms;
-  -webkit-transition-delay: 200ms;
-  -o-transition-delay: 200ms;
-  -ms-transition-delay: 200ms;
+.bgLR span.cap {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  z-index: 3; /*テキストを前面に出す*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /*テキストの色を変えたい場合はここを修正*/
+  line-height: 1.5; /*行の高さを1.5にする*/
 }
-/* 3つ目の要素に400msのdelayをかける */
-#effect2 > div .fadein:nth-of-type(3) {
-  -moz-transition-delay: 400ms;
-  -webkit-transition-delay: 400ms;
-  -o-transition-delay: 400ms;
-  -ms-transition-delay: 400ms;
+
+.bgLR:hover span.cap {
+  /*hoverした時の変化*/
+  opacity: 1;
 }
