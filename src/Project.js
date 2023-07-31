@@ -55,7 +55,7 @@ const Project = () => {
           <MyProject
             title="Eventer (Japanese)"
             description="I developed Eventer, a web application built with React and TypeScript, marking the beginning of my career as a Front-end Developer. This application serves as a platform for event searching, registration, participation, and ticket sales. My primary responsibilities included developing the event registration feature and adding form validation functionalities."
-            technologies={["React", "TypeScript", "AWS", "Recoil"]}
+            technologies={["React", "TypeScript", "MUI", "AWS", "Recoil"]}
             thumbnail={Eventer}
             link="https://www.eventer.website/"
           />
