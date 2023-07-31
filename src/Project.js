@@ -1,12 +1,10 @@
 import React from "react";
 import vanPark from "./images/Vancouver-Park.png";
-import errLogger from "./images/Error-logger.png";
 import trendSearch from "./images/Trend-Search.png";
-import petMatching from "./images/Pet-Matching.png";
-import MotiveDiary from "./images/Motive-Diary.png";
-import { SiGithub } from "react-icons/si";
-import { BiLinkExternal } from "react-icons/bi";
+import MotiveIcon from "./images/Problem solving-bro.png";
+import Eventer from "./images/Eventer.png";
 import "./styles/Project.css";
+import MyProject from "./ProjectComponent";
 
 const Project = () => {
   return (
@@ -17,106 +15,50 @@ const Project = () => {
             <h2>my project</h2>
           </div>
         </div>
-        <div className="project-content fadein">
-          <div className="project-image">
-            <div className="bgLR">
-              <span className="mask">
-                <img src={vanPark} alt="project-image1" className="leftSide"></img>
-                <span className="cap">
-                  <h5>Landing Page</h5>
-                  <div className="project-links">
-                    <a href="https://github.com/YuyaHirano1994/camp-website" target="_blank" rel="noreferrer">
-                      <SiGithub />
-                    </a>
-                    <a href="https://vancouverpark.netlify.app/" target="_blank" rel="noreferrer">
-                      <BiLinkExternal />
-                    </a>
-                  </div>
-                </span>
-              </span>
-            </div>
-            <p>Landing page</p>
-          </div>
-          <div className="project-image">
-            <div className="bgLR">
-              <span className="mask">
-                <img src={MotiveDiary} alt="project-image1"></img>
-                <span className="cap">
-                  <h5>Motive Diary</h5>
-                  <div className="project-links">
-                    <a href="https://github.com/YuyaHirano1994/MotiveDiary" target="_blank" rel="noreferrer">
-                      <SiGithub />
-                    </a>
-                    <a href="https://motive-diary.vercel.app/" target="_blank" rel="noreferrer">
-                      <BiLinkExternal />
-                    </a>
-                  </div>
-                </span>
-              </span>
-            </div>
-            <p>React & Supabase</p>
-          </div>
-          <div className="project-image">
-            <div className="bgLR">
-              <span className="mask">
-                <img src={errLogger} alt="project-image1" className="leftSide"></img>
-                <span className="cap">
-                  <h5>Error logger</h5>
-                  <div className="project-links">
-                    <a href="https://github.com/YuyaHirano1994/error-logger" target="_blank" rel="noreferrer">
-                      <SiGithub />
-                    </a>
-                    <a href="https://error-logger-nine.vercel.app/" target="_blank" rel="noreferrer">
-                      <BiLinkExternal />
-                    </a>
-                  </div>
-                </span>
-              </span>
-            </div>
-            <p>Redux CRUD</p>
-          </div>
-          <div className="project-image">
-            <div className="bgLR">
-              <span className="mask">
-                <img src={trendSearch} alt="project-image1"></img>
-                <span className="cap">
-                  <h5>Twitter Trend</h5>
-                  <div className="project-links">
-                    <a href="https://github.com/YuyaHirano1994/Twitter-Trend-Search" target="_blank" rel="noreferrer">
-                      <SiGithub />
-                    </a>
-                    <a href="https://twitter-trend-search.vercel.app/" target="_blank" rel="noreferrer">
-                      <BiLinkExternal />
-                    </a>
-                  </div>
-                </span>
-              </span>
-            </div>
-            <p>React & AWS</p>
-          </div>
-          <div className="project-image">
-            <div className="bgLR">
-              <span className="mask">
-                <img src={petMatching} alt="project-image1"></img>
-                <span className="cap">
-                  <h5>Pet Matching</h5>
-                  <div className="project-links">
-                    <a href="https://github.com/YuyaHirano1994/pet-matching-app" target="_blank" rel="noreferrer">
-                      <SiGithub />
-                    </a>
-                    <a href="https://pet-matching-app.vercel.app/" target="_blank" rel="noreferrer">
-                      <BiLinkExternal />
-                    </a>
-                  </div>
-                </span>
-              </span>
-            </div>
-            <p>React & API</p>
-          </div>
+        <div className="fadein">
+          <MyProject
+            title="Vancouver Park(LP)"
+            description="For Vancouver Park, an imaginary camping destination, I developed a responsive landing page showcasing the site's picturesque locations and amenities. "
+            technologies={["HTML", "CSS"]}
+            thumbnail={vanPark}
+            github="https://github.com/YuyaHirano1994/camp-website"
+            link="https://vancouverpark.netlify.app/"
+          />
+        </div>
+        <div className="fadein">
+          <MyProject
+            title="Motive Diary"
+            description="Motive Diary is a diary application designed to help users meet their challenges by setting goals and recording daily progress. Created as a solution to the difficulty of tracking personal growth on platforms like Twitter, this CRUD web application was built using React, Supabase, Material UI, and Recoil. The intuitive interface enables easy reviewing of individual records, fostering a supportive community where users can cheer each other on in their personal journeys."
+            technologies={["React", "Supabase", "MUI", "Recoil"]}
+            thumbnail={MotiveIcon}
+            github="https://github.com/YuyaHirano1994/MotiveDiary"
+            link="https://motive-diary.vercel.app/"
+          />
+        </div>
+        <div className="fadein">
+          <MyProject
+            title="Twitter Trend"
+            description="This unique application was built with React, TypeScript, tailwindCSS, AWS Lambda, and AWS Gateway, utilizing Twitter's API to allow users to visually check the latest information. By simply entering a keyword and pressing the search button, users can instantly access real-time insights. The combination of Twitter's API and AWS distinguishes this project, reflecting a pioneering approach to information retrieval."
+            technologies={["React", "TypeScript", "AWS", "Twitter API"]}
+            thumbnail={trendSearch}
+            github="https://github.com/YuyaHirano1994/Twitter-Trend-Search"
+            link="https://twitter-trend-search.vercel.app/"
+          />
+        </div>
 
-          {/* <div className="project-image">
-                  <img src="#" alt="project-image1"></img>
-                </div> */}
+        <div className="project-title fadein">
+          <div className="title">
+            <h2>my work</h2>
+          </div>
+        </div>
+        <div className="fadein">
+          <MyProject
+            title="Eventer (Japanese)"
+            description="I developed Eventer, a web application built with React and TypeScript, marking the beginning of my career as a Front-end Developer. This application serves as a platform for event searching, registration, participation, and ticket sales. My primary responsibilities included developing the event registration feature and adding form validation functionalities."
+            technologies={["React", "TypeScript", "AWS", "Recoil"]}
+            thumbnail={Eventer}
+            link="https://www.eventer.website/"
+          />
         </div>
       </div>
     </div>
