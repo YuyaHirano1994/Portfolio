@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { BsGithub, BsLinkedin, BsArrowDown } from "react-icons/bs";
+import { SiWantedly } from "react-icons/si";
 import { FaFileDownload } from "react-icons/fa";
 import "./styles/Hero.css";
 
@@ -88,22 +89,30 @@ const Hero = () => {
           </div>
           <div className="hero-icons">
             <div className="icon">
-              <a href="https://github.com/YuyaHirano1994" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/YuyaHirano1994"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <BsGithub />
               </a>
             </div>
             <div className="icon">
-              <a href="https://www.linkedin.com/in/yuya-hirano/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/in/yuya-hirano/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <BsLinkedin />
               </a>
             </div>
             <div className="icon">
               <a
-                href="https://www.linkedin.com/in/yuya-hirano/overlay/1635526738190/single-media-viewer/?profileId=ACoAAD0iPRgBMCRVceSgyfkb4euO3KgLVqQbRO4"
+                href="https://www.wantedly.com/id/yuya_hirano_1994"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaFileDownload />
+                <SiWantedly />
               </a>
             </div>
           </div>
